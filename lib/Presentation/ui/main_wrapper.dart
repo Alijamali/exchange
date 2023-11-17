@@ -1,6 +1,6 @@
 import 'package:curved_drawer_fork/curved_drawer_fork.dart';
 import 'package:exchange/Presentation/ui/pages/home_page.dart';
-import 'package:exchange/Presentation/ui/searchable_market_page.dart';
+import 'package:exchange/Presentation/ui/pages/searchable_market_page.dart';
 import 'package:exchange/Presentation/ui/pages/signup_page.dart';
 import 'package:exchange/Presentation/ui/pages/about_me_page.dart';
 import 'package:flutter/material.dart';

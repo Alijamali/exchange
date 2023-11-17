@@ -41,6 +41,16 @@ class Messages extends Translations {
           'about_me_communication':'Communication and Collaboration',
 
 
+          'dependencies':'Dependencies',
+          'list_dependencies':''
+              '  ✔ Provider \n'
+              '  ✔ Dio \n'
+              '  ✔ Get \n'
+              '  ✔ Shimmer \n'
+              '  ✔ Lottie \n'
+              '  ✔ Shared preferences',
+
+
 
 
 
@@ -86,6 +96,15 @@ class Messages extends Translations {
           'about_me_ci_cd':'Continuous Integration and Deployment',
           'about_me_solving':'Problem-Solving and Troubleshooting',
           'about_me_communication':'Communication and Collaboration',
+
+          'dependencies':'Dependencies',
+          'list_dependencies':''
+              '✔ Provider \n'
+              '✔ Dio \n'
+              '✔ Get \n'
+              '✔ Shimmer \n'
+              '✔ Lottie \n'
+              '✔ Shared preferences \n',
 
 
         }

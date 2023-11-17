@@ -13,7 +13,6 @@ class _WatchListPageState extends State<WatchListPage> {
   int pageIndex = 1;
   final PageController pageViewController = PageController(initialPage: 0);
 
-
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
@@ -21,8 +20,6 @@ class _WatchListPageState extends State<WatchListPage> {
     final padding = MediaQuery.of(context).padding;
 
     TextTheme textTheme = Theme.of(context).textTheme;
-
-
 
     return SafeArea(
       child: Scaffold(
@@ -54,7 +51,6 @@ class _WatchListPageState extends State<WatchListPage> {
                               setState(() {
                                 pageIndex = 1;
                               });
-
                             },
                             style: pageIndex == 1
                                 ? ElevatedButton.styleFrom(backgroundColor: Colors.blueAccent)
@@ -109,7 +105,7 @@ class _WatchListPageState extends State<WatchListPage> {
                     },
                     children: [
                       widgetSkills(textTheme),
-                      widgetAboutApp(),
+                      widgetAboutApp(textTheme),
                     ],
                   ),
                 )
@@ -309,11 +305,48 @@ class _WatchListPageState extends State<WatchListPage> {
     );
   }
 
-  Widget widgetAboutApp() {
-    return const SizedBox(
-      height: 200,
-      width: double.infinity,
-      child: Text("this test text. this test text. this test text. this test text. this test text. \n this test text. this test text. this test text.  "),
+  Widget widgetAboutApp(TextTheme textTheme) {
+    return SingleChildScrollView(
+      child: Stack(
+        children: <Widget>[
+          Column(
+            children: [
+              Directionality(
+                textDirection: TextDirection.rtl,
+                child: ExpansionTile(
+                  initiallyExpanded: true,
+                  tilePadding: EdgeInsets.zero,
+                  title: Text(
+                    'dependencies'.tr,
+                    style: textTheme.bodyLarge,
+                    textDirection: TextDirection.ltr,
+                  ),
+                  shape: BeveledRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  expandedAlignment: Alignment.center,
+                  trailing: const Icon(
+                    size: 28,
+                    Icons.local_fire_department,
+                    color: Colors.amberAccent,
+                  ),
+                  children: [
+                    Column(
+                      children: [
+                        Text(
+                          'list_dependencies'.tr,
+                          style: textTheme.bodyMedium,
+                          textDirection: TextDirection.ltr,
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
