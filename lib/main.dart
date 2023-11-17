@@ -6,6 +6,7 @@ import 'package:exchange/Logic/utils/MyThemes.dart';
 import 'package:exchange/Logic/provider/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 import 'Logic/provider/all_crypto_data_provider.dart';
@@ -21,8 +22,11 @@ void main() {
   SystemChrome.setPreferredOrientations(
     [DeviceOrientation.portraitUp],
   );
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   runApp(
+
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => ThemeProvider()),
@@ -47,8 +51,14 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
 
-    Timer(const Duration(seconds: 4), () => Get.to(const MainWrapper()));
+    Timer(const Duration(seconds: 4), () => Get.to(()=>  const MainWrapper()));
+
+    Future.delayed(Duration.zero).then((value) => {
+      FlutterNativeSplash.remove()
+    });
     super.initState();
+
+
   }
 
   @override
