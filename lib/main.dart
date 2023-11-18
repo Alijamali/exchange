@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:exchange/Logic/provider/crypto_data_provider.dart';
 import 'package:exchange/Logic/provider/language_provider.dart';
@@ -26,7 +27,6 @@ void main() {
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   runApp(
-
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => ThemeProvider()),
@@ -43,22 +43,31 @@ void main() {
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
+
+
   @override
   State<MyApp> createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
+
+  int look_screen = 0;
   @override
   void initState() {
+    Timer(
+      const Duration(seconds: 4),
+      () {
+        Get.to( const MainWrapper() );
+        look_screen = 1;
+      }
+    );
 
-    Timer(const Duration(seconds: 4), () => Get.to(()=>  const MainWrapper()));
+    if(look_screen == 1){
+      exit(0);
+    }
 
-    Future.delayed(Duration.zero).then((value) => {
-      FlutterNativeSplash.remove()
-    });
+    Future.delayed(Duration.zero).then((value) => {FlutterNativeSplash.remove()});
     super.initState();
-
-
   }
 
   @override

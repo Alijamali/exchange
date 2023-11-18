@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:exchange/Logic/provider/language_provider.dart';
@@ -156,7 +157,9 @@ class _HomePageState extends State<HomePage> {
                         child: SizedBox(
                           height: height * 0.06,
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              exit(0);
+                            },
                             style: ElevatedButton.styleFrom(
                                 shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
                                 padding: const EdgeInsets.only(left: 12, right: 12),

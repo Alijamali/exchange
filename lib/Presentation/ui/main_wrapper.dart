@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:curved_drawer_fork/curved_drawer_fork.dart';
 import 'package:exchange/Presentation/ui/pages/home_page.dart';
 import 'package:exchange/Presentation/ui/pages/searchable_market_page.dart';
@@ -19,10 +21,10 @@ class _MainWrapperState extends State<MainWrapper> {
 
   DateTime timeBackPress = DateTime.now();
 
+
+
   @override
   Widget build(BuildContext context) {
-
-    
 
     return WillPopScope(
         child: Scaffold(
@@ -85,8 +87,10 @@ class _MainWrapperState extends State<MainWrapper> {
               icon: const Icon(Icons.exit_to_app, color: Colors.deepOrange),
               backgroundColor: const Color(0xff838996),
             );
+
             return false;
           } else {
+            exit(0);
             return true;
           }
         });
