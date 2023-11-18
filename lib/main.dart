@@ -51,20 +51,15 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
 
-  int look_screen = 0;
   @override
   void initState() {
     Timer(
       const Duration(seconds: 4),
       () {
         Get.to( const MainWrapper() );
-        look_screen = 1;
       }
     );
 
-    if(look_screen == 1){
-      exit(0);
-    }
 
     Future.delayed(Duration.zero).then((value) => {FlutterNativeSplash.remove()});
     super.initState();
