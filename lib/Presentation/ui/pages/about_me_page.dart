@@ -299,6 +299,101 @@ class _WatchListPageState extends State<WatchListPage> {
                 ),
               ),
             ),
+
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Divider(
+                    color: Colors.amber,
+                    height: 1,
+                  ),
+                  Divider(
+                    color: Colors.amber,
+                    height: 1,
+                  ),
+                  Divider(
+                    color: Colors.amber,
+                    height: 1,
+                  ),
+                  Divider(
+                    color: Colors.amber,
+                    height: 1,
+                  ),
+                  Divider(
+                    color: Colors.amber,
+                    height: 1,
+
+                  ),
+                  Divider(
+                    color: Colors.amber,
+                    height: 1,
+
+                  ),
+                ],
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Column(
+                children: [
+                  Text(
+                    'Email: Ali.j7x@gmail.com',
+                    style: textTheme.bodyMedium,
+
+                    textDirection: TextDirection.ltr,
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: Column(
+                children: [
+                  Text(
+                    'Phone: +98 936 361 48 52',
+                    style: textTheme.bodyMedium,
+
+                    textDirection: TextDirection.ltr,
+                  ),
+                ],
+              ),
+            ),
+
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Divider(
+                    color: Colors.amber,
+                    height: 1,
+                  ),
+                  Divider(
+                    color: Colors.amber,
+                    height: 1,
+                  ),
+                  Divider(
+                    color: Colors.amber,
+                    height: 1,
+                  ),
+                  Divider(
+                    color: Colors.amber,
+                    height: 1,
+                  ),
+                  Divider(
+                    color: Colors.amber,
+                    height: 1,
+
+                  ),
+                  Divider(
+                    color: Colors.amber,
+                    height: 1,
+
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ]),
@@ -343,7 +438,7 @@ class _WatchListPageState extends State<WatchListPage> {
                   ],
                 ),
               ),
-            ],
+                          ],
           ),
         ],
       ),

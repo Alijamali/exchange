@@ -91,7 +91,6 @@ class _MainWrapperState extends State<MainWrapper> {
             return false;
           } else {
             exit(0);
-            return true;
           }
         });
   }
