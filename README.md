@@ -1,21 +1,25 @@
 # exchange
-Flutter software based on coinmarketcap api
+Flutter software based on coinmarketcap api <br/>
 
 
 
 
-finall app look like : --
-
-![ezgif com-gif-maker (1)](https://github.com/Alijamali/exchange/assets/14884611/e7de662b-a512-4527-9c0f-96fe0db7a437)
+finall app look like : <br/>
 
 
 
-Features :
-    -Display slash screen
-    -Slider display
-    -Change language
-    -Change the theme
-    -Search among currencies
-    -Login page and field check
-    -Select the tab and display the appropriate list
+![ezgif com-resize (1)](https://github.com/Alijamali/exchange/assets/14884611/cf6d65dd-92d7-4abf-9f8a-2ae7373ea01f)
+
+
+<br/>
+
+
+Features :<br/>
+    -Display slash screen<br/>
+    -Slider display<br/>
+    -Change language<br/>
+    -Change the theme<br/>
+    -Search among currencies<br/>
+    -Login page and field check<br/>
+    -Select the tab and display the appropriate list<br/>
 
